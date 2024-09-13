@@ -87,22 +87,6 @@ h1 {
 }
 
 /* Additional font classes */
-.arial-font {
-    font-family: Arial, sans-serif;
-}
-
-.times-new-roman-font {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.verdana-font {
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-.georgia-font {
-    font-family: Georgia, serif;
-}
-
 .urdu-typesetting-font {
     font-family: 'Urdu Typesetting', sans-serif;
     font-size: 200%;
