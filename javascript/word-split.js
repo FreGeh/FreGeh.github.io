@@ -6,7 +6,7 @@ function splitWord() {
     let urduChars = unicodeToUrduArrayChars(unicodeText);
     const spacedWord = urduChars.map(char => {
         const romanizedChar = urduToRomanized[char] || char; // Get the Romanized version or use the character itself if not found
-        return `<span class="tooltip">${char}<span class="tooltiptext"><span class="tooltiptext-inner" style="font-family:Noto Sans">${romanizedChar}</span></span></span>`;
+        return `<span class="tooltip" class="urdu-font">${char}<span class="tooltiptext"><span class="tooltiptext-inner" style="font-family:Noto Sans">${romanizedChar}</span></span></span>`;
     }).join(" "); // Add title attribute to each character
     outputDiv.innerHTML = spacedWord;
 }
