@@ -87,17 +87,29 @@ h1 {
 }
 
 /* Additional font classes */
+
+@font-face {
+    font-family: 'Urdu Typesetting', sans-serif;
+    src: url(fonts\UrdTypeb.woff);
+  }
 .urdu-typesetting-font {
     font-family: 'Urdu Typesetting', sans-serif;
     font-size: 200%;
 }
 
+@font-face {
+    font-family: 'Jameel Noori Nastaleeq Regular', sans-serif;
+    src: url('fonts\Jameel Noori Nastaleeq Regular.ttf');
+  }
 .jameel-noori-nastaleeq-font {
-    font-family: 'Jameel Noori Nastaleeq', sans-serif;
+    font-family: 'Jameel Noori Nastaleeq Regular', sans-serif;
     font-size: 200%;
 }
-
+@font-face {
+    font-family: 'Nafees Regular', sans-serif;
+    src: url('fonts\Nafees Regular.ttf');
+  }
 .nafees-nastaleeq-font {
-    font-family: 'Nafees Nastaleeq', sans-serif;
+    font-family: 'Nafees Regular', sans-serif;
     font-size: 200%;
 }
