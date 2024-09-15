@@ -1,1 +1,2 @@
-DirectoryIndex subsites
+RewriteEngine On
+RewriteBase /subsites/
