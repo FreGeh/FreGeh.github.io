@@ -1,0 +1,125 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available) before including bootstrap
+$primary: green;
+
+
+// then import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x, $max-width: $container-max-width) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $max-width;
+}
+
+
+// Then add additional custom code here
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+// Usage
+.container-extrasmall {
+    @include make-container($padding-x: 15px, $max-width: 400px); // Adjust the max-width as needed
+}
+
+h1 {
+    font-size: 200%;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    visibility: visible;
+}
+
+.tooltiptext {
+    visibility: visible;
+    width: auto;
+    /* Adjust width based on content */
+    max-width: 200px;
+    /* Optional: set a max width */
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 100%;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    /* Position the tooltip above the text */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the tooltip horizontally */
+    opacity: 0;
+    transition: opacity 0.2s;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    /* Center the text vertically */
+    vertical-align: middle;
+    justify-content: center;
+    /* Center the text horizontally */
+}
+
+.tooltiptext-inner {
+    display: inline;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.content {
+    padding: 16px;
+}
+
+.urdu-font {
+    font-family: 'Noto Nastaliq Urdu', system-ui;
+}
+
+/* Additional font classes */
+
+@font-face {
+    font-family: 'Urdu Typesetting', sans-serif;
+    src: url(fonts\UrdTypeb.woff);
+}
+
+.urdu-typesetting-font {
+    font-family: 'Urdu Typesetting', sans-serif;
+    font-size: 200%;
+}
+
+@font-face {
+    font-family: 'Jameel Noori Nastaleeq Regular', sans-serif;
+    src: url('fonts\Jameel Noori Nastaleeq Regular.ttf');
+}
+
+.jameel-noori-nastaleeq-font {
+    font-family: 'Jameel Noori Nastaleeq Regular', sans-serif;
+    font-size: 200%;
+}
+
+@font-face {
+    font-family: 'Nafees Regular', sans-serif;
+    src: url('fonts\Nafees Regular.ttf');
+}
+
+.nafees-nastaleeq-font {
+    font-family: 'Nafees Regular', sans-serif;
+    font-size: 200%;
+}
