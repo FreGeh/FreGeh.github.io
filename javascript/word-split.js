@@ -1,12 +1,13 @@
 function splitWord() {
     const inputWord = document.getElementById('inputWord').value;
     const outputDiv = document.getElementById('output');
+    const savedUrduFont =  localStorage.getItem('urduFont') || 'noto-nastaliq-urdu';
     outputDiv.innerHTML = ''; // Clear previous output
     let unicodeText = urduToUnicode(inputWord);
     let urduChars = unicodeToUrduArrayChars(unicodeText);
     const spacedWord = urduChars.map(char => {
         const romanizedChar = urduToRomanized[char] || char; // Get the Romanized version or use the character itself if not found
-        return `<span data-toggle="tooltip" data-placement="top" title="${romanizedChar}" class="urdu-font">${char}</span>`;
+        return `<span data-toggle="tooltip" data-placement="top" title="${romanizedChar}" class="urdu-font ${savedUrduFont}-font">${char}</span>`;
     }); // Add title attribute to each character
     spacedWord.reverse();
     const spacedWordString = spacedWord.join(" ");

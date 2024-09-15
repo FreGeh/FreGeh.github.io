@@ -1,10 +1,14 @@
-// Custom.scss
-// Option A: Include all of Bootstrap
-
-// Include any default variable overrides here (though functions won't be available) before including bootstrap
-$primary: green;
-
-
+// base
+$primary: rgb(17, 87, 64);
+$body-tertiary-bg: rgb(17, 87, 64);
+$body-emphasis-color: white;
+$input-disabled-bg: rgb(17, 87, 64);
+$input-focus-color : white;
+// navbar - dropdown
+$dropdown-bg: rgb(17, 87, 64);
+$dropdown-link-color: $body-emphasis-color;
+$dropdown-link-hover-bg: darken($body-tertiary-bg, 10%);
+ 
 // then import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -28,6 +32,10 @@ body {
     font-size: 100%;
 }
 
+.spacer {
+    margin-top: 70px; /* Adjust the margin as needed */
+}
+
 // Usage
 .container-extrasmall {
     @include make-container($padding-x: 15px, $max-width: 400px); // Adjust the max-width as needed
@@ -36,6 +44,11 @@ body {
 h1 {
     font-size: 200%;
 }
+
+// prevent it from not centering properly when scrollbar is there
+.navbar {
+    padding-left: calc(100vw - 100%);
+  }
 
 /* Tooltip container */
 .tooltip {
@@ -96,30 +109,30 @@ h1 {
 
 @font-face {
     font-family: 'Urdu Typesetting', sans-serif;
-    src: url(fonts\UrdTypeb.woff);
+    src: url('../fonts/Typesetting.woff');
 }
 
 .urdu-typesetting-font {
     font-family: 'Urdu Typesetting', sans-serif;
-    font-size: 200%;
+    font-size: 250%;
 }
 
 @font-face {
-    font-family: 'Jameel Noori Nastaleeq Regular', sans-serif;
-    src: url('fonts\Jameel Noori Nastaleeq Regular.ttf');
+    font-family: 'Jameel Regular', sans-serif;
+    src: url('../fonts/Jameel.ttf');
 }
 
-.jameel-noori-nastaleeq-font {
-    font-family: 'Jameel Noori Nastaleeq Regular', sans-serif;
-    font-size: 200%;
+.jameel-font {
+    font-family: 'Jameel Regular', sans-serif;
+    font-size: 250%;
 }
 
 @font-face {
     font-family: 'Nafees Regular', sans-serif;
-    src: url('fonts\Nafees Regular.ttf');
+    src: url('../fonts/Nafees.ttf');
 }
 
-.nafees-nastaleeq-font {
+.nafees-font {
     font-family: 'Nafees Regular', sans-serif;
-    font-size: 200%;
+    font-size: 250%;
 }
